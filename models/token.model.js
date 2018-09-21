@@ -76,7 +76,7 @@ class Token extends Model {
       return false
     }
 
-    return Token.verify(this.id)
+    return this.expires > Date.now()
   }
 }
 
@@ -89,7 +89,7 @@ Token.verify = async function verify(tokenId) {
   try {
     const token = new Token(tokenId)
     await token.load()
-    return token.expires > Date.now()
+    return token.verify()
   } catch (error) {
     return false
   }
@@ -111,7 +111,7 @@ Token.create = async function create(userId, validForMs) {
 }
 
 Token.delete = async function del(tokenId) {
-  new Token(tokenId).delete()
+  await new Token(tokenId).delete()
 }
 
 module.exports = Token
