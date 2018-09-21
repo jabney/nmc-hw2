@@ -80,7 +80,7 @@ const handlers = {}
 handlers.users = createLibHandler(userHandlers, ['post', 'get', 'put', 'delete'])
 
 // Create token handlers.
-handlers.tokens = createLibHandler(tokenHandlers, ['post', /* 'get', */ 'put', 'delete'])
+handlers.tokens = createLibHandler(tokenHandlers, ['post', 'get', 'put', 'delete'])
 
 /**
  * Ping route handler.
