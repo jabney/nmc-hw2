@@ -1,0 +1,2 @@
+
+node utils/watcher tests.config.js *.js api config lib models
