@@ -1,0 +1,3 @@
+#! /bin/sh
+
+source .env && node utils/watcher index.js config lib api models
