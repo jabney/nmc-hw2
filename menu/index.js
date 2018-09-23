@@ -8,14 +8,6 @@ const createFile = util.promisify(storage.create)
 const deleteFile = util.promisify(storage.delete)
 const listFiles = util.promisify(storage.list)
 
-// /**
-//  * @typedef {'item'|'option'|'pizza'} ItemType
-//  */
-
-// /**
-//  * @typedef {'x-small'|'small'|'medium'|'large'|'x-large'} ItemSize
-//  */
-
 /**
  * @typedef {Object} Item
  * @property {string} id
