@@ -50,6 +50,8 @@ class Token extends Model {
    * Assign elements from given data to members of this model.
    *
    * @param {TokenData} data
+   *
+   * @returns {Token}
    */
   deserialize(data) {
     this.id = typeof data.id === 'undefined' && this.id || data.id
@@ -62,6 +64,8 @@ class Token extends Model {
    * Extend this token by the given ms.
    *
    * @param {number} ms The number of milliseconds to extend the token.
+   *
+   * @returns {Token}
    */
   extend(ms) {
     this.expires = Date.now() + ms
@@ -110,6 +114,11 @@ Token.create = async function create(userId, validForMs) {
   return token
 }
 
+/**
+ * Delete a token.
+ *
+ * @param {string} tokenId
+ */
 Token.delete = async function del(tokenId) {
   await new Token(tokenId).delete()
 }
