@@ -13,23 +13,22 @@ const tokenHandlers = require('./tokens.api')
  * @property {Object} payload
  */
 
-/**
- * @typedef {Object} UserRecord
- * @property {string} email
- * @property {string} [firstName]
- * @property {string} [lastName]
- * @property {string} [password]
- * @property {boolean} [tosAgreement]
- * @property {string[]} [checks]
- */
+// /**
+//  * @typedef {Object} UserRecord
+//  * @property {string} email
+//  * @property {string} [firstName]
+//  * @property {string} [lastName]
+//  * @property {any} [address]
+//  * @property {string} [password]
+//  */
 
-/**
- * @typedef {Object} TokenData
- * @property {string} id
- * @property {string} [email]
- * @property {number} [expires]
- * @property {boolean} [extend]
- */
+// /**
+//  * @typedef {Object} TokenData
+//  * @property {string} id
+//  * @property {string} [email]
+//  * @property {number} [expires]
+//  * @property {boolean} [extend]
+//  */
 
 /**
  * @typedef {(code: number, payload?: Object) => void} HandlerResponse
