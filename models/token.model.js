@@ -2,7 +2,7 @@ const helpers = require('../lib/helpers')
 const Model = require('./model')
 
 /**
- * @typedef {Object} TokenRecord
+ * @typedef {Object} TokenData
  * @property {string} id
  * @property {string} userId
  * @property {number} expires
@@ -34,7 +34,7 @@ class Token extends Model {
   /**
    * Return members of this model as elements of an object.
    *
-   * @returns {TokenRecord}
+   * @returns {TokenData}
    */
   serialize() {
     const serializedToken = {
@@ -49,7 +49,7 @@ class Token extends Model {
   /**
    * Assign elements from given data to members of this model.
    *
-   * @param {TokenRecord} data
+   * @param {TokenData} data
    */
   deserialize(data) {
     this.id = typeof data.id === 'undefined' && this.id || data.id
