@@ -1,4 +1,5 @@
 const api = require('../api')
+const User = require('../../models/user.model')
 const Validator = require('../../lib/validator')
 
 const reEmail = /^.+?@.+?\..{2,4}$/
@@ -16,7 +17,7 @@ const reEmail = /^.+?@.+?\..{2,4}$/
 /**
  * @typedef {Object} PutData
  * @property {string} tokenId
- * @property {api.UserRecord} userRecord
+ * @property {User.UserRecord} userRecord
  */
 
 /**
@@ -26,8 +27,51 @@ const reEmail = /^.+?@.+?\..{2,4}$/
  */
 
 /**
+ * Validate a user's address.
+ *
+ * @param {User.Address} address
+ * @param {Validator} validator
+ */
+function validateAddress(address, validator) {
+  if (address) {
+
+    validator
+      .name('line1')
+      .value(address.line1)
+      .isString({trim: true, msg: 'address.line1 must be a string'})
+      .isTruthy({msg: 'address.line1 must be non-empty string'})
+
+    validator
+      .name('line2')
+      .value(address.line2)
+      .optional()
+      .isString({trim: true, msg: 'address.line2 must be a string'})
+      .isTruthy({msg: 'address.line2 must be non-empty string'})
+
+    validator
+      .name('city')
+      .value(address.city)
+      .isString({trim: true, msg: 'address.city must be a string'})
+      .isTruthy({msg: 'address.city must be non-empty string'})
+
+    validator
+      .name('state')
+      .value(address.state)
+      .isString({trim: true, msg: 'address.state must be a string'})
+      .isTruthy({msg: 'address.state must be non-empty string'})
+      .matches(/[a-z]{2}/i, {msg: 'address.state must be a valid state abbreviation'})
+
+    validator
+      .name('zip')
+      .value(address.zip)
+      .isString({trim: true, msg: 'address.zip must be a string'})
+      .matches(/^\d{5}(?:-\d{4})?$/, {msg: 'address.zip must be proper zip code format'})
+  }
+}
+
+/**
  * @param {api.RequestData} data
- * @param {(errors: ValidationError[], record?: api.UserRecord) => void} callback
+ * @param {(errors: ValidationError[], record?: User.UserRecord) => void} callback
  */
 const post = function post(data, callback) {
   const validator = new Validator(data)
@@ -55,6 +99,14 @@ const post = function post(data, callback) {
     .from('payload')
     .isString({trim: true, msg: 'password must be a string'})
     .isLength({min: 10, max: 128, msg: 'password must be between 10 and 128 characters'})
+
+  const address = validator
+    .name('address')
+    .from('payload')
+    .isObject({msg: 'address must be an object'})
+    .get()
+
+  validateAddress(address, validator)
 
   // Get any validation errors.
   const errors = validator.errors()
@@ -134,15 +186,21 @@ const put = function put(data, callback) {
     .isString({trim: true, msg: 'password must be a string'})
     .isLength({min: 10, max: 128, msg: 'password must be between 10 and 128 characters'})
 
-  /**
-   * @type {string}
-   */
   const tokenId = validator
     .name('token')
     .from('headers')
     .isString({trim: true, msg: 'token must be a string'})
     .isLength({min: 32, max: 32, msg: 'invalid token format'})
     .get()
+
+  const address = validator
+    .name('address')
+    .from('payload')
+    .optional()
+    .isObject({msg: 'address must be an object'})
+    .get()
+
+  validateAddress(address, validator)
 
   // Get any validation errors.
   const errors = validator.errors()
