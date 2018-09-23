@@ -1,4 +1,4 @@
-const timeMs = require('../lib/time-ms')
+const timeMs = require('./lib/time-ms')
 
 /**
  * @typedef {Object} Environment
