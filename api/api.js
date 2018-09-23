@@ -3,6 +3,7 @@
  */
 const userHandlers = require('./users.api')
 const tokenHandlers = require('./tokens.api')
+const menuHandlers = require('./menu.api')
 
 /**
  * @typedef {Object} RequestData
@@ -80,6 +81,9 @@ handlers.users = createLibHandler(userHandlers, ['post', 'get', 'put', 'delete']
 
 // Create token handlers.
 handlers.tokens = createLibHandler(tokenHandlers, ['post', 'get', 'put', 'delete'])
+
+// Create menu handlers.
+handlers.menu = createLibHandler(menuHandlers, ['get'])
 
 /**
  * Ping route handler.
