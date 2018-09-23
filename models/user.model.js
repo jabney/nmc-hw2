@@ -2,10 +2,20 @@ const helpers = require('../lib/helpers')
 const Model = require('./model')
 
 /**
+ * @typedef {Object} Address
+ * @property {string} line1
+ * @property {string} [line2]
+ * @property {string} city
+ * @property {string} state
+ * @property {string} zip
+ */
+
+/**
  * @typedef {Object} UserRecord
  * @property {string} email
  * @property {string} [firstName]
  * @property {string} [lastName]
+ * @property {Address} [address]
  * @property {string} [password]
  */
 
@@ -30,6 +40,11 @@ class User extends Model {
      * @type {string}
      */
     this.lastName = null
+
+    /**
+     * @type {Address}
+     */
+    this.address = null
 
     /**
      * @type {string}
@@ -64,6 +79,7 @@ class User extends Model {
       email: this.email,
       firstName: this.firstName,
       lastName: this.lastName,
+      address: this.address,
       password: this.password,
     }
 
@@ -81,6 +97,7 @@ class User extends Model {
     this.email = typeof data.email !== 'undefined' ? data.email : this.email
     this.firstName = typeof data.firstName !== 'undefined' ? data.firstName : this.firstName
     this.lastName = typeof data.lastName !== 'undefined' ? data.lastName : this.lastName
+    this.address = typeof data.address !== 'undefined' ? data.address : this.address
 
     if (typeof data.password !== 'undefined') {
       if (hashPassword) {
