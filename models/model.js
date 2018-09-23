@@ -9,24 +9,10 @@ const { NotImplementedError } = require('../lib/errors')
  * @typedef {{[key: string]: any}} Record
  */
 
-/**
- * @type {(dir: string, file: string, data: Record, cb?) => Promise<Record>}
- */
+// Promisify storage methods.
 const createFile = util.promisify(storage.create)
-
-/**
- * @type {(dir: string, file: string, cb?) => Promise<Record>}
- */
 const readFile = util.promisify(storage.read)
-
-/**
- * @type {(dir: string, file: string, data: Record, cb?) => Promise<Record>}
- */
 const updateFile = util.promisify(storage.update)
-
-/**
- * @type {(dir: string, file: string, cb?) => Promise<Record>}
- */
 const deleteFile = util.promisify(storage.delete)
 
 class Model {
