@@ -115,7 +115,7 @@ lib.put = (requestData, response) => {
     }
 
     // Get variables from validator.
-    const { tokenId, userRecord } = putData
+    const { tokenId, userData } = putData
 
     // Verify the token.
     const verified = await Token.verify(tokenId)
@@ -124,12 +124,12 @@ lib.put = (requestData, response) => {
     }
 
     // Check that the user record has one or more keys.
-    if (Object.keys(userRecord).length === 0) {
+    if (Object.keys(userData).length === 0) {
       return response(400, { error: 'no update fields specified' })
     }
 
     // Create a user model.
-    const user = new User(userRecord.email)
+    const user = new User(userData.email)
 
     try {
       // Load the user.
@@ -140,10 +140,10 @@ lib.put = (requestData, response) => {
 
     try {
       // Update the user.
-      user.deserialize(userRecord, true)
+      user.deserialize(userData, true)
       await user.save()
-      delete userRecord.password
-      return response(200, { user: userRecord })
+      delete userData.password
+      return response(200, { user: userData })
     } catch (error) {
       return response(500, { error: 'error updating user'})
     }
