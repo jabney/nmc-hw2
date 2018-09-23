@@ -1,14 +1,14 @@
+const config = require('../config')
 const api = require('../api/api')
 const tokenValidators = require('./validators/token.validators')()
 const Token = require('../models/token.model')
 const User = require('../models/user.model')
-const timeMs = require('../lib/time-ms')
 
 /**
- * @typedef {api.TokenData} TokenData
+ * @typedef {Token.TokenData} TokenData
  */
 /**
- * @typedef {api.UserRecord} UserRecord
+ * @typedef {User.UserData} UserData
  */
 /**
  * @typedef {api.RequestHandler} RequestHandler
@@ -59,7 +59,7 @@ lib.post = (requestData, response) => {
 
     try {
       // Create the token and respond.
-      const token = await Token.create(email, timeMs({hours: 24}))
+      const token = await Token.create(email, config.authTokenExpMs)
       return response(200, { token: token.serialize() })
     } catch (error) {
       // Unknown error.
@@ -128,7 +128,7 @@ lib.put = (requestData, response) => {
 
     try {
       // Extend the token by twenty-four hours.
-      token.extend(timeMs({hours: 24}))
+      token.extend(config.authTokenExpMs)
       token.save()
       return response(200, { message: 'token extended' })
     } catch (error) {
