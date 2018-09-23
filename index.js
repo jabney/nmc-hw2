@@ -1,11 +1,15 @@
 
 const server = require('./lib/server')
+const workers = require('./lib/workers')
 
 const app = {}
 
 app.init = function init() {
   // Start the server.
   server.init()
+
+  // Start the workers.
+  workers.init()
 }
 
 app.init()
