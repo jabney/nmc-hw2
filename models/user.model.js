@@ -11,7 +11,7 @@ const Model = require('./model')
  */
 
 /**
- * @typedef {Object} UserRecord
+ * @typedef {Object} UserData
  * @property {string} email
  * @property {string} [firstName]
  * @property {string} [lastName]
@@ -69,11 +69,11 @@ class User extends Model {
   /**
    * Return members of this model as elements of an object.
    *
-   * @returns {UserRecord}
+   * @returns {UserData}
    */
   serialize() {
     /**
-     * @type {UserRecord}
+     * @type {UserData}
      */
     const serializedUser = {
       email: this.email,
@@ -89,7 +89,7 @@ class User extends Model {
   /**
    * Extend this token by the given ms.
    *
-   * @param {UserRecord} data
+   * @param {UserData} data
    * @param {boolean} [hashPassword]
    */
   deserialize(data, hashPassword) {
