@@ -17,7 +17,7 @@ const reEmail = /^.+?@.+?\..{2,4}$/
 /**
  * @typedef {Object} PutData
  * @property {string} tokenId
- * @property {User.UserRecord} userRecord
+ * @property {User.UserData} userData
  */
 
 /**
@@ -71,7 +71,7 @@ function validateAddress(address, validator) {
 
 /**
  * @param {api.RequestData} data
- * @param {(errors: ValidationError[], record?: User.UserRecord) => void} callback
+ * @param {(errors: ValidationError[], record?: User.UserData) => void} callback
  */
 const post = function post(data, callback) {
   const validator = new Validator(data)
@@ -211,7 +211,7 @@ const put = function put(data, callback) {
   }
 
   // Validation passed. Return the user record.
-  callback(null, { tokenId, userRecord: validator.getValues()})
+  callback(null, { tokenId, userData: validator.getValues()})
 }
 
 /**
