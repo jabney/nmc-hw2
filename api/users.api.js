@@ -4,7 +4,7 @@ const User = require('../models/user.model')
 const Token = require('../models/token.model')
 
 /**
- * @typedef {api.UserRecord} UserRecord
+ * @typedef {User.UserData} UserData
  */
 
 /**
