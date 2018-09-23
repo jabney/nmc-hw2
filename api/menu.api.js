@@ -2,7 +2,7 @@ const util = require('util')
 
 const api = require('./api')
 const storage = require('../lib/storage')
-const menu = require('../menu')
+const menu = require('../lib/menu')
 
 const listFiles = util.promisify(storage.list)
 const readFile = util.promisify(storage.read)
