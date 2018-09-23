@@ -1,3 +1,5 @@
+const timeMs = require('../lib/time-ms')
+
 /**
  * @typedef {Object} Environment
  * @property {string} name
@@ -5,6 +7,7 @@
  * @property {string|number} httpsPort
  * @property {string} hashingSecret
  * @property {number} maxChecks
+ * @property {number} authTokenExpMs
  * @property {TwilioConfig} twilio
  */
 
@@ -33,6 +36,7 @@ environments.staging = {
   httpsPort: 3001,
   hashingSecret: HASHING_SECRET,
   maxChecks: 5,
+  authTokenExpMs: timeMs({hours: 24}),
   twilio: {
     fromPhone: '+15005550006',
     accountSid: 'ACb32d411ad7fe886aac54c665d25e5c5d',
@@ -49,6 +53,7 @@ environments.production = {
   httpsPort: process.env.port || 5001,
   hashingSecret: HASHING_SECRET,
   maxChecks: 5,
+  authTokenExpMs: timeMs({hours: 24}),
   twilio: {
     fromPhone: '',
     accountSid: '',
