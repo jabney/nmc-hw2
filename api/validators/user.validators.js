@@ -1,5 +1,5 @@
 const api = require('../api')
-const User = require('../../models/user.model')
+const User = require('../../lib/models/user.model')
 const Validator = require('../../lib/validator')
 
 const reEmail = /^.+?@.+?\..{2,4}$/

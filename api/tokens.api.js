@@ -1,8 +1,8 @@
 const config = require('../config')
 const api = require('../api/api')
 const tokenValidators = require('./validators/token.validators')()
-const Token = require('../models/token.model')
-const User = require('../models/user.model')
+const Token = require('../lib/models/token.model')
+const User = require('../lib/models/user.model')
 
 /**
  * @typedef {Token.TokenData} TokenData
