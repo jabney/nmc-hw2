@@ -29,6 +29,10 @@
 const menu = {
   items: [
     {
+      name: 'Big Bear Special',
+      desc: 'A pizza only an actual bear would want to order. We heap gobs of fresh, raw salmon on a pizza with various other toppings of dubious quality and freshness, from undisclosed sources.',
+    },
+    {
       name: 'Cheeze Pizza (a.k.a The Commando)',
       desc: 'A pizza with nothing but cheeze. We\'re not really sure why though.',
     },
@@ -49,7 +53,7 @@ const menu = {
       desc: 'A fully-capable, well-rounded pizza with pepperoni, bacon, italian sausage, mushrooms, black olives, roasted garlic, spinach, pine nuts, jalepenos, and fresh basil. It would have been simpler to list what this pizza doesn\'t have on it.',
     },
     {
-      name: 'The Gambler (also known as the RNG)',
+      name: 'The Gambler (a.k.a the RNG)',
       desc: 'We select three toppings at random and apply them generously but indiscriminately to a cheese pizza. No refunds.',
     },
     {
