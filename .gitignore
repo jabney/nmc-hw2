@@ -7,3 +7,6 @@
 # Local data
 .data/
 .logs/
+
+# Temp folder
+temp/
