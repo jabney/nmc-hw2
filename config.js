@@ -8,14 +8,13 @@ const timeMs = require('./lib/time-ms')
  * @property {string} hashingSecret
  * @property {number} maxChecks
  * @property {number} authTokenExpMs
- * @property {TwilioConfig} twilio
+ * @property {StripeConfig} stripe
  */
 
 /**
- * @typedef {Object} TwilioConfig
- * @property {string} fromPhone
- * @property {string} accountSid
- * @property {string} authToken
+ * @typedef {Object} StripeConfig
+ * @property {string} privateKey
+ * @property {string} publicKey
  */
 
 const HASHING_SECRET = process.env.HASHING_SECRET
@@ -37,10 +36,9 @@ environments.staging = {
   hashingSecret: HASHING_SECRET,
   maxChecks: 5,
   authTokenExpMs: timeMs({hours: 24}),
-  twilio: {
-    fromPhone: '+15005550006',
-    accountSid: 'ACb32d411ad7fe886aac54c665d25e5c5d',
-    authToken: '9455e3eb3109edc12e3d8c92768f7a67',
+  stripe: {
+    privateKey: process.env.STRIPE_PRIVATE_KEY,
+    publicKey: process.env.STRIPE_PUBLIC_KEY
   },
 }
 
@@ -49,15 +47,14 @@ environments.staging = {
  */
 environments.production = {
   name: 'production',
-  httpPort: process.env.PORT || 5000,
-  httpsPort: process.env.port || 5001,
+  httpPort: 5000,
+  httpsPort: 5001,
   hashingSecret: HASHING_SECRET,
   maxChecks: 5,
   authTokenExpMs: timeMs({hours: 24}),
-  twilio: {
-    fromPhone: '',
-    accountSid: '',
-    authToken: '',
+  stripe: {
+    privateKey: process.env.STRIPE_PRIVATE_KEY,
+    publicKey: process.env.STRIPE_PUBLIC_KEY
   },
 }
 
