@@ -9,12 +9,18 @@ const timeMs = require('./lib/time-ms')
  * @property {number} maxChecks
  * @property {number} authTokenExpMs
  * @property {StripeConfig} stripe
+ * @property {MailgunConfig} mailgun
  */
 
 /**
  * @typedef {Object} StripeConfig
- * @property {string} privateKey
- * @property {string} publicKey
+ * @property {string} key
+ */
+
+/**
+ * @typedef {Object} MailgunConfig
+ * @property {string} key
+ * @property {string} domain
  */
 
 const HASHING_SECRET = process.env.HASHING_SECRET
@@ -37,9 +43,12 @@ environments.staging = {
   maxChecks: 5,
   authTokenExpMs: timeMs({hours: 24}),
   stripe: {
-    privateKey: process.env.STRIPE_PRIVATE_KEY,
-    publicKey: process.env.STRIPE_PUBLIC_KEY
+    key: process.env.STRIPE_PRIVATE_KEY,
   },
+  mailgun: {
+    key: process.env.MAILGUN_API_KEY,
+    domain: 'sandboxa829973ebc32434bbe472c1cb3c03496.mailgun.org',
+  }
 }
 
 /**
@@ -53,9 +62,12 @@ environments.production = {
   maxChecks: 5,
   authTokenExpMs: timeMs({hours: 24}),
   stripe: {
-    privateKey: process.env.STRIPE_PRIVATE_KEY,
-    publicKey: process.env.STRIPE_PUBLIC_KEY
+    key: process.env.STRIPE_PRIVATE_KEY,
   },
+  mailgun: {
+    key: process.env.MAILGUN_API_KEY,
+    domain: 'sandboxa829973ebc32434bbe472c1cb3c03496.mailgun.org',
+  }
 }
 
 /**
