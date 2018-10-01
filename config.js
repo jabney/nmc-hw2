@@ -1,7 +1,5 @@
 const timeMs = require('./lib/time-ms')
 
-const { createRandomString } = require('./lib/helpers')
-
 /**
  * @typedef {Object} Environment
  * @property {string} name
@@ -41,7 +39,7 @@ environments.staging = {
   name: 'staging',
   httpPort: 3000,
   httpsPort: 3001,
-  hashingSecret: HASHING_SECRET || createRandomString(16),
+  hashingSecret: HASHING_SECRET || 'parklands',
   maxChecks: 5,
   authTokenExpMs: timeMs({hours: 24}),
   stripe: {
