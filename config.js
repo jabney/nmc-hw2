@@ -1,5 +1,7 @@
 const timeMs = require('./lib/time-ms')
 
+const { createRandomString } = require('./lib/helpers')
+
 /**
  * @typedef {Object} Environment
  * @property {string} name
@@ -39,7 +41,7 @@ environments.staging = {
   name: 'staging',
   httpPort: 3000,
   httpsPort: 3001,
-  hashingSecret: HASHING_SECRET,
+  hashingSecret: HASHING_SECRET || createRandomString(16),
   maxChecks: 5,
   authTokenExpMs: timeMs({hours: 24}),
   stripe: {
@@ -74,6 +76,11 @@ environments.production = {
  * Get the environment name from the system environment.
  */
 const envName = process.env.NODE_ENV || 'staging'
+
+// In production a hashing secret must be explicitly set in environment.
+if (envName === 'production' && !HASHING_SECRET) {
+  throw new Error('<config> hashing secret must be set in the environment')
+}
 
 /**
  * Get the environment object from the environment name.
