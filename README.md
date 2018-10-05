@@ -524,9 +524,14 @@ Response:
 
 ### 5. A logged-in user should be able to create an order. You should integrate with the Sandbox of Stripe.com to accept their payment.
 
+Posting to the `/order` route will process an order based on the contents of the user's cart.
+
 Request:
 
 ```
+POST /order
+Content-Type: application/json
+
 {
   "ccinfo": {
     "number": 4242424242424242,
