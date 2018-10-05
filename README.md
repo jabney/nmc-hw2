@@ -770,7 +770,7 @@ Response:
         "type": "pizza",
         "desc": "We failed in our duty to provide enough pizza options and now
           you are forced to build your own. Or perhaps you are just a wierdo.
-          his pizza starts with cheese and then makes your every wish its command.",
+          This pizza starts with cheese and then makes your every wish its command.",
         "price": {
           "small": 9.99,
           "medium": 11.99,
