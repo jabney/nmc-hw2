@@ -212,17 +212,17 @@ POST /users
 Content-Type: application/json
 
 {
-	"firstName": "James",
-	"lastName": "Abney",
-	"email": "jimmy@example.com",
-	"password": "abcdefghij",
-	"address": {
-		"line1": "1234 5th Street",
-		"line2": "Suite 42",
-		"city": "Auburn",
-		"state": "WA",
-		"zip": "98001-0000"
-	}
+  "firstName": "James",
+  "lastName": "Abney",
+  "email": "jimmy@example.com",
+  "password": "abcdefghij",
+  "address": {
+    "line1": "1234 5th Street",
+    "line2": "Suite 42",
+    "city": "Auburn",
+    "state": "WA",
+    "zip": "98001-0000"
+  }
 }
 ```
 
@@ -256,7 +256,7 @@ PATCH: /users
 Content-Type: application/json
 
 {
-	"firstName": "Jimmy"
+  "firstName": "Jimmy"
 }
 ```
 
@@ -366,40 +366,40 @@ POST /cart
 Content-Type: application/json
 
 {
-	"items": [
-		{
-			"id": "big-bear-special-pizza",
-			"size": "x-large"
-		},
-		{
-			"id": "proprietary-pizza",
-			"size": "large",
-			"add": [
-				{
-					"id": "roasted-garlic-topping"
-				},
-				{
-					"id": "bacon-topping"
-				},
-				{
-					"id": "fresh-basil-topping"
-				}
-			]
-		},
-		{
-			"id": "spinach-salad",
-			"size": "regular",
-			"add": [
-				{
-					"id": "blue-cheese-dressing"
-				}
-			]
-		},
-		{
-			"id": "diet-snpa-beverage",
-			"size": "regular"
-		}
-	]
+  "items": [
+    {
+      "id": "big-bear-special-pizza",
+      "size": "x-large"
+    },
+    {
+      "id": "proprietary-pizza",
+      "size": "large",
+      "add": [
+        {
+          "id": "roasted-garlic-topping"
+        },
+        {
+          "id": "bacon-topping"
+        },
+        {
+          "id": "fresh-basil-topping"
+        }
+      ]
+    },
+    {
+      "id": "spinach-salad",
+      "size": "regular",
+      "add": [
+        {
+          "id": "blue-cheese-dressing"
+        }
+      ]
+    },
+    {
+      "id": "diet-snpa-beverage",
+      "size": "regular"
+    }
+  ]
 }
 ```
 
@@ -528,12 +528,12 @@ Request:
 
 ```
 {
-	"ccinfo": {
-		"number": 4242424242424242,
-		"exp_month": 12,
-		"exp_year": 2019,
-		"cvc": 456
-	}
+  "ccinfo": {
+    "number": 4242424242424242,
+    "exp_month": 12,
+    "exp_year": 2019,
+    "cvc": 456
+  }
 }
 ```
 
