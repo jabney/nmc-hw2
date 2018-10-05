@@ -547,9 +547,11 @@ Response:
 
 ### 6. When an order is placed, you should email the user a receipt. You should integrate with the sandbox of Mailgun.com for this.
 
+```
 From: Big Bear Pizza <bigbear@sandboxa829973ebc32434bbe472c1cb3c03469.mailgun.org>
 To: jimmy@example.com
 Subject: Your order is on its way!
+```
 
 Body:
 
@@ -595,500 +597,500 @@ Response:
 
 ```json
 {
-    "welcome": [
-        "                            Welcome to Big Bear Pizza                           ",
-        "                                                                                ",
-        "                                                                                ",
-        "                                                .                               ",
-        "                              ..:::..:...   .::::::.... .                       ",
-        "                          ::1111::::.    .:::::111:..::. ..                     ",
-        "                       .::111:::..    ..:::.::::::1:::::.....                   ",
-        "                    ...::::::....   .::::...:::::::........                     ",
-        "                  .::11::::.....  ..:::...::::....        ....                  ",
-        "                 .:::1:::.........::......::...        .                        ",
-        "                .:::::......:....::...  ....                      ...           ",
-        "               ....:::.....::..::::..  :221:..  ....:::::....   .:11::.         ",
-        "              ....::::...::.::::::::...188888::...::::111::...:1281111:         ",
-        "             ....:11:...:::::::::::::1::1281.......:...........:::1282.         ",
-        "             ::::111:..:1::::::::.::11. .11.....::::::::::::..  ...11.          ",
-        "            ::111112:.:::::1:1::::::1:..:1:::::.::::::11:::.... ....:           ",
-        "           .:1212222::::::11:::111111:.:121::.::::::::1:::..:...  ..:.          ",
-        "           :211112221::::11:::11122221.:21:::::1::111::111:::::....::           ",
-        "          .11111122211111111:::1212222121::::22122281::22221111::::.            ",
-        "          :1111222221:111111.:11222222822:.:11112211::::11111111:::             ",
-        "          :::112222211:1111:.1222222222281.:111111:::::::12111111:.             ",
-        "          :111111222111111::122222222228882::2211:::::::::111211.:.             ",
-        "          .v1111122211222::122222222222288881121:::::.:::::111:.:1.             ",
-        "           .2222222222221:1222122222228821111:::::..::...::11:.:11              ",
-        "            v22222222888:12222122228881:...    .1111::::::..::11::              ",
-        "            .12112212882:111222222221:...       .288282111:.:111::              ",
-        "             :2112228881::11128828:  .:::11:..:.  :1111:....:::::.              ",
-        "              v11128888::111228881  :112882:.:11v...      .....1:               ",
-        "              .11112888::11211188 .2888:v:....   .v:..    ..  .....             ",
-        "              .111128882:12111121:88288           88211:.......   ...           ",
-        "               :::12888811112222122228:          :8882281:::::.     :..         ",
-        "               ::12228888111122222122:           :822221...:111:::.  .::..      ",
-        "                112122888111112112112            :22222.  .1221.:vvv:::..:      ",
-        "                :111222821:1111122122.           v22222:.12218:                 ",
-        "                .111111221:12122222112..         :821121282121                  ",
-        "                 111111221:1222222222222v.       .21222821128                   ",
-        "                 :11121122::12228822222222v.     .2122222212v                   ",
-        "                 .112221121 .222888828222222v    .2222222221.                   ",
-        "                 .112128211:.:288822288222228v   :2222222128.                   ",
-        "                 :11122221::: :88822222222288:   22122111122                    ",
-        "               ..:::1222221:1::.v88882288212:   v2221221121. ...  ...   .       ",
-        "    ...... .....:111111:1211112v1:18888282v:   v82288222221 ..  .   ..  ..  ..:.",
-        "....:::..::......vv::::.:v::::::1:.::::.::.. .:2v:82v222222:.................:.."
+  "welcome": [
+    "                            Welcome to Big Bear Pizza                           ",
+    "                                                                                ",
+    "                                                                                ",
+    "                                                .                               ",
+    "                              ..:::..:...   .::::::.... .                       ",
+    "                          ::1111::::.    .:::::111:..::. ..                     ",
+    "                       .::111:::..    ..:::.::::::1:::::.....                   ",
+    "                    ...::::::....   .::::...:::::::........                     ",
+    "                  .::11::::.....  ..:::...::::....        ....                  ",
+    "                 .:::1:::.........::......::...        .                        ",
+    "                .:::::......:....::...  ....                      ...           ",
+    "               ....:::.....::..::::..  :221:..  ....:::::....   .:11::.         ",
+    "              ....::::...::.::::::::...188888::...::::111::...:1281111:         ",
+    "             ....:11:...:::::::::::::1::1281.......:...........:::1282.         ",
+    "             ::::111:..:1::::::::.::11. .11.....::::::::::::..  ...11.          ",
+    "            ::111112:.:::::1:1::::::1:..:1:::::.::::::11:::.... ....:           ",
+    "           .:1212222::::::11:::111111:.:121::.::::::::1:::..:...  ..:.          ",
+    "           :211112221::::11:::11122221.:21:::::1::111::111:::::....::           ",
+    "          .11111122211111111:::1212222121::::22122281::22221111::::.            ",
+    "          :1111222221:111111.:11222222822:.:11112211::::11111111:::             ",
+    "          :::112222211:1111:.1222222222281.:111111:::::::12111111:.             ",
+    "          :111111222111111::122222222228882::2211:::::::::111211.:.             ",
+    "          .v1111122211222::122222222222288881121:::::.:::::111:.:1.             ",
+    "           .2222222222221:1222122222228821111:::::..::...::11:.:11              ",
+    "            v22222222888:12222122228881:...    .1111::::::..::11::              ",
+    "            .12112212882:111222222221:...       .288282111:.:111::              ",
+    "             :2112228881::11128828:  .:::11:..:.  :1111:....:::::.              ",
+    "              v11128888::111228881  :112882:.:11v...      .....1:               ",
+    "              .11112888::11211188 .2888:v:....   .v:..    ..  .....             ",
+    "              .111128882:12111121:88288           88211:.......   ...           ",
+    "               :::12888811112222122228:          :8882281:::::.     :..         ",
+    "               ::12228888111122222122:           :822221...:111:::.  .::..      ",
+    "                112122888111112112112            :22222.  .1221.:vvv:::..:      ",
+    "                :111222821:1111122122.           v22222:.12218:                 ",
+    "                .111111221:12122222112..         :821121282121                  ",
+    "                 111111221:1222222222222v.       .21222821128                   ",
+    "                 :11121122::12228822222222v.     .2122222212v                   ",
+    "                 .112221121 .222888828222222v    .2222222221.                   ",
+    "                 .112128211:.:288822288222228v   :2222222128.                   ",
+    "                 :11122221::: :88822222222288:   22122111122                    ",
+    "               ..:::1222221:1::.v88882288212:   v2221221121. ...  ...   .       ",
+    "    ...... .....:111111:1211112v1:18888282v:   v82288222221 ..  .   ..  ..  ..:.",
+    "....:::..::......vv::::.:v::::::1:.::::.::.. .:2v:82v222222:.................:.."
+  ],
+  "menu": {
+    "pizza": [
+      {
+        "order": 0,
+        "name": "The Big Bear Special",
+        "id": "big-bear-special-pizza",
+        "type": "pizza",
+        "desc": "A pizza only an actual bear would want to eat. We add a whole,
+          raw salmon to a pizza with various other toppings of dubious quality
+          and freshness.",
+        "price": {
+          "small": 12.99,
+          "medium": 14.99,
+          "large": 16.99,
+          "x-large": 18.99
+        }
+      },
+      {
+        "order": 1,
+        "name": "Cheese Pizza (a.k.a The Commando)",
+        "id": "cheese-pizza",
+        "type": "pizza",
+        "desc": "An unencumbered pizza with nothing but cheese.",
+        "price": {
+          "small": 9.99,
+          "medium": 11.99,
+          "large": 13.99,
+          "x-large": 15.99
+        }
+      },
+      {
+        "order": 2,
+        "name": "Combination Pizza",
+        "id": "combo-pizza",
+        "type": "pizza",
+        "desc": "A pizza with pepperoni, italian sausage, mushrooms, olives,
+          and green peppers - for those needing a low-risk or unimaginative
+          pizza option.",
+        "price": {
+          "small": 12.99,
+          "medium": 14.99,
+          "large": 16.99,
+          "x-large": 18.99
+        }
+      },
+      {
+        "order": 3,
+        "name": "The Node",
+        "id": "node-pizza",
+        "type": "pizza",
+        "desc": "An asynchronous, event-driven pizza with chicken sausage,
+          bacon, tomatoes, and fresh basil - for anyone wanting a pizza
+          that runs on the front and back end.",
+        "price": {
+          "small": 12.99,
+          "medium": 14.99,
+          "large": 16.99,
+          "x-large": 18.99
+        }
+      },
+      {
+        "order": 4,
+        "name": "The Leslie",
+        "id": "leslie-pizza",
+        "type": "pizza",
+        "desc": "An erudite and cosmopolitan pizza with pepperoni, bacon,
+          roasted garlic, and pine nuts - for customers with sophisticated
+          taste and a sense of style.",
+        "price": {
+          "small": 12.99,
+          "medium": 14.99,
+          "large": 16.99,
+          "x-large": 18.99
+        }
+      },
+      {
+        "order": 5,
+        "name": "The Full Stack",
+        "id": "full-stack-pizza",
+        "type": "pizza",
+        "desc": "A fully-capable, well-rounded pizza with pepperoni, bacon,
+          italian sausage, mushrooms, black olives, roasted garlic, spinach,
+          pine nuts, jalepenos, and fresh basil. It would've been simpler to
+          list what this pizza doesn't have on it.",
+        "price": {
+          "small": 15.99,
+          "medium": 17.99,
+          "large": 19.99,
+          "x-large": 21.99
+        }
+      },
+      {
+        "order": 6,
+        "name": "The Gambler (a.k.a the RNG)",
+        "id": "gambler-pizza",
+        "type": "pizza",
+        "desc": "We select three toppings at random and apply them generously
+          but indiscriminately to a cheese pizza. No refunds.",
+        "price": {
+          "small": 12.99,
+          "medium": 14.99,
+          "large": 16.99,
+          "x-large": 18.99
+        }
+      },
+      {
+        "order": 7,
+        "name": "The Chef's Special",
+        "id": "chefs-special-pizza",
+        "type": "pizza",
+        "desc": "This pizza is for repeat customers who've been discourtious
+          to our drivers on previous deliveries. We start with the pizza you
+          order and add some additional, non-disclosed bonus toppings free of
+          charge. Bon apetit!",
+        "price": {
+          "small": 12.99,
+          "medium": 14.99,
+          "large": 16.99,
+          "x-large": 18.99
+        }
+      },
+      {
+        "order": 8,
+        "name": "The Proprietary (build your own)",
+        "id": "proprietary-pizza",
+        "type": "pizza",
+        "desc": "We failed in our duty to provide enough pizza options and now
+          you are forced to build your own. Or perhaps you are just a wierdo.
+          his pizza starts with cheese and then makes your every wish its command.",
+        "price": {
+          "small": 9.99,
+          "medium": 11.99,
+          "large": 13.99,
+          "x-large": 15.99
+        }
+      }
     ],
-    "menu": {
-        "pizza": [
-            {
-                "order": 0,
-                "name": "The Big Bear Special",
-                "id": "big-bear-special-pizza",
-                "type": "pizza",
-                "desc": "A pizza only an actual bear would want to eat. We add a whole,
-                  raw salmon to a pizza with various other toppings of dubious quality
-                  and freshness.",
-                "price": {
-                    "small": 12.99,
-                    "medium": 14.99,
-                    "large": 16.99,
-                    "x-large": 18.99
-                }
-            },
-            {
-                "order": 1,
-                "name": "Cheese Pizza (a.k.a The Commando)",
-                "id": "cheese-pizza",
-                "type": "pizza",
-                "desc": "An unencumbered pizza with nothing but cheese.",
-                "price": {
-                    "small": 9.99,
-                    "medium": 11.99,
-                    "large": 13.99,
-                    "x-large": 15.99
-                }
-            },
-            {
-                "order": 2,
-                "name": "Combination Pizza",
-                "id": "combo-pizza",
-                "type": "pizza",
-                "desc": "A pizza with pepperoni, italian sausage, mushrooms, olives,
-                  and green peppers - for those needing a low-risk or unimaginative
-                  pizza option.",
-                "price": {
-                    "small": 12.99,
-                    "medium": 14.99,
-                    "large": 16.99,
-                    "x-large": 18.99
-                }
-            },
-            {
-                "order": 3,
-                "name": "The Node",
-                "id": "node-pizza",
-                "type": "pizza",
-                "desc": "An asynchronous, event-driven pizza with chicken sausage,
-                  bacon, tomatoes, and fresh basil - for anyone wanting a pizza
-                  that runs on the front and back end.",
-                "price": {
-                    "small": 12.99,
-                    "medium": 14.99,
-                    "large": 16.99,
-                    "x-large": 18.99
-                }
-            },
-            {
-                "order": 4,
-                "name": "The Leslie",
-                "id": "leslie-pizza",
-                "type": "pizza",
-                "desc": "An erudite and cosmopolitan pizza with pepperoni, bacon,
-                  roasted garlic, and pine nuts - for customers with sophisticated
-                  taste and a sense of style.",
-                "price": {
-                    "small": 12.99,
-                    "medium": 14.99,
-                    "large": 16.99,
-                    "x-large": 18.99
-                }
-            },
-            {
-                "order": 5,
-                "name": "The Full Stack",
-                "id": "full-stack-pizza",
-                "type": "pizza",
-                "desc": "A fully-capable, well-rounded pizza with pepperoni, bacon,
-                  italian sausage, mushrooms, black olives, roasted garlic, spinach,
-                  pine nuts, jalepenos, and fresh basil. It would've been simpler to
-                  list what this pizza doesn't have on it.",
-                "price": {
-                    "small": 15.99,
-                    "medium": 17.99,
-                    "large": 19.99,
-                    "x-large": 21.99
-                }
-            },
-            {
-                "order": 6,
-                "name": "The Gambler (a.k.a the RNG)",
-                "id": "gambler-pizza",
-                "type": "pizza",
-                "desc": "We select three toppings at random and apply them generously
-                  but indiscriminately to a cheese pizza. No refunds.",
-                "price": {
-                    "small": 12.99,
-                    "medium": 14.99,
-                    "large": 16.99,
-                    "x-large": 18.99
-                }
-            },
-            {
-                "order": 7,
-                "name": "The Chef's Special",
-                "id": "chefs-special-pizza",
-                "type": "pizza",
-                "desc": "This pizza is for repeat customers who've been discourtious
-                  to our drivers on previous deliveries. We start with the pizza you
-                  order and add some additional, non-disclosed bonus toppings free of
-                  charge. Bon apetit!",
-                "price": {
-                    "small": 12.99,
-                    "medium": 14.99,
-                    "large": 16.99,
-                    "x-large": 18.99
-                }
-            },
-            {
-                "order": 8,
-                "name": "The Proprietary (build your own)",
-                "id": "proprietary-pizza",
-                "type": "pizza",
-                "desc": "We failed in our duty to provide enough pizza options and now
-                  you are forced to build your own. Or perhaps you are just a wierdo.
-                  his pizza starts with cheese and then makes your every wish its command.",
-                "price": {
-                    "small": 9.99,
-                    "medium": 11.99,
-                    "large": 13.99,
-                    "x-large": 15.99
-                }
-            }
-        ],
-        "toppings": [
-            {
-                "order": 9,
-                "name": "Pepperoni",
-                "id": "pepperoni-topping",
-                "type": "topping",
-                "price": {
-                    "small": 1,
-                    "medium": 1.5,
-                    "large": 2,
-                    "x-large": 2.5
-                }
-            },
-            {
-                "order": 10,
-                "name": "Italian Sausage",
-                "id": "italian-sausage-topping",
-                "type": "topping",
-                "price": {
-                    "small": 1,
-                    "medium": 1.5,
-                    "large": 2,
-                    "x-large": 2.5
-                }
-            },
-            {
-                "order": 11,
-                "name": "Chicken Sausage",
-                "id": "chicken-sausage-topping",
-                "type": "topping",
-                "price": {
-                    "small": 1,
-                    "medium": 1.5,
-                    "large": 2,
-                    "x-large": 2.5
-                }
-            },
-            {
-                "order": 12,
-                "name": "Bacon",
-                "id": "bacon-topping",
-                "type": "topping",
-                "price": {
-                    "small": 1,
-                    "medium": 1.5,
-                    "large": 2,
-                    "x-large": 2.5
-                }
-            },
-            {
-                "order": 13,
-                "name": "Mushrooms",
-                "id": "mushrooms-topping",
-                "type": "topping",
-                "price": {
-                    "small": 0.5,
-                    "medium": 1,
-                    "large": 1.5,
-                    "x-large": 2
-                }
-            },
-            {
-                "order": 14,
-                "name": "Black Olives",
-                "id": "black-olives-topping",
-                "type": "topping",
-                "price": {
-                    "small": 0.5,
-                    "medium": 1,
-                    "large": 1.5,
-                    "x-large": 2
-                }
-            },
-            {
-                "order": 15,
-                "name": "Roasted Garlic",
-                "id": "roasted-garlic-topping",
-                "type": "topping",
-                "price": {
-                    "small": 0.5,
-                    "medium": 1,
-                    "large": 1.5,
-                    "x-large": 2
-                }
-            },
-            {
-                "order": 16,
-                "name": "Green Peppers",
-                "id": "green-peppers-topping",
-                "type": "topping",
-                "price": {
-                    "small": 0.5,
-                    "medium": 1,
-                    "large": 1.5,
-                    "x-large": 2
-                }
-            },
-            {
-                "order": 17,
-                "name": "Tomatoes",
-                "id": "tomatoes-topping",
-                "type": "topping",
-                "price": {
-                    "small": 0.5,
-                    "medium": 1,
-                    "large": 1.5,
-                    "x-large": 2
-                }
-            },
-            {
-                "order": 18,
-                "name": "Spinach",
-                "id": "spinach-topping",
-                "type": "topping",
-                "price": {
-                    "small": 0.5,
-                    "medium": 1,
-                    "large": 1.5,
-                    "x-large": 2
-                }
-            },
-            {
-                "order": 19,
-                "name": "Jalepenos",
-                "id": "jalepenos-topping",
-                "type": "topping",
-                "price": {
-                    "small": 0.5,
-                    "medium": 1,
-                    "large": 1.5,
-                    "x-large": 2
-                }
-            },
-            {
-                "order": 20,
-                "name": "Pine Nuts",
-                "id": "pine-nuts-topping",
-                "type": "topping",
-                "price": {
-                    "small": 0.5,
-                    "medium": 1,
-                    "large": 1.5,
-                    "x-large": 2
-                }
-            },
-            {
-                "order": 21,
-                "name": "Fresh Basil",
-                "id": "fresh-basil-topping",
-                "type": "topping",
-                "price": {
-                    "small": 0.5,
-                    "medium": 1,
-                    "large": 1.5,
-                    "x-large": 2
-                }
-            }
-        ],
-        "salads": [
-            {
-                "order": 22,
-                "name": "Garden Salad",
-                "id": "garden-salad",
-                "type": "salad",
-                "price": {
-                    "regular": 5,
-                    "large": 6.5
-                }
-            },
-            {
-                "order": 23,
-                "name": "Greek Salad",
-                "id": "greek-salad",
-                "type": "salad",
-                "price": {
-                    "regular": 5,
-                    "large": 6.5
-                }
-            },
-            {
-                "order": 24,
-                "name": "Caesar Salad",
-                "id": "caesar-salad",
-                "type": "salad",
-                "price": {
-                    "regular": 5,
-                    "large": 6.5
-                }
-            },
-            {
-                "order": 25,
-                "name": "Spinach Salad",
-                "id": "spinach-salad",
-                "type": "salad",
-                "price": {
-                    "regular": 5,
-                    "large": 6.5
-                }
-            }
-        ],
-        "dressings": [
-            {
-                "order": 26,
-                "name": "House Dressing",
-                "id": "house-dressing",
-                "type": "dressing",
-                "price": {
-                    "regular": 1.5,
-                    "large": 2
-                }
-            },
-            {
-                "order": 27,
-                "name": "Caesar Dressing",
-                "id": "caesar-dressing",
-                "type": "dressing",
-                "price": {
-                    "regular": 1.5,
-                    "large": 2
-                }
-            },
-            {
-                "order": 28,
-                "name": "Blue Cheese Dressing",
-                "id": "blue-cheese-dressing",
-                "type": "dressing",
-                "price": {
-                    "regular": 1.5,
-                    "large": 2
-                }
-            },
-            {
-                "order": 29,
-                "name": "Ranch Dressing",
-                "id": "ranch-dressing",
-                "type": "dressing",
-                "price": {
-                    "regular": 1.5,
-                    "large": 2
-                }
-            },
-            {
-                "order": 30,
-                "name": "Italian Dressing",
-                "id": "italian-dressing",
-                "type": "dressing",
-                "price": {
-                    "regular": 1.5,
-                    "large": 2
-                }
-            }
-        ],
-        "beverages": [
-            {
-                "order": 31,
-                "name": "San Pellegrino",
-                "id": "san-pellegrino-beverage",
-                "type": "beverage",
-                "desc": "Delicious sparkling water.",
-                "price": {
-                    "regular": 2.5
-                }
-            },
-            {
-                "order": 32,
-                "name": "Water",
-                "id": "water-beverage",
-                "type": "beverage",
-                "desc": "Delicious water without the sparkles",
-                "price": {
-                    "regular": 1
-                }
-            },
-            {
-                "order": 33,
-                "name": "Cola",
-                "id": "cola-beverage",
-                "type": "beverage",
-                "price": {
-                    "regular": 1.5
-                }
-            },
-            {
-                "order": 34,
-                "name": "Diet Cola",
-                "id": "diet-cola-beverage",
-                "type": "beverage",
-                "price": {
-                    "regular": 1.5
-                }
-            },
-            {
-                "order": 35,
-                "name": "Sierra Nevada Pale Ale",
-                "id": "snpa-beverage",
-                "type": "beverage",
-                "desc": "A very butch beer with tons of flavor.",
-                "price": {
-                    "regular": 2.5
-                }
-            },
-            {
-                "order": 36,
-                "name": "Diet Sierra Nevada Pale Ale",
-                "id": "diet-snpa-beverage",
-                "type": "beverage",
-                "desc": "The exact same as regular SNPA but \"diet\".",
-                "price": {
-                    "regular": 3
-                }
-            }
-        ]
-    }
+    "toppings": [
+      {
+        "order": 9,
+        "name": "Pepperoni",
+        "id": "pepperoni-topping",
+        "type": "topping",
+        "price": {
+          "small": 1,
+          "medium": 1.5,
+          "large": 2,
+          "x-large": 2.5
+        }
+      },
+      {
+        "order": 10,
+        "name": "Italian Sausage",
+        "id": "italian-sausage-topping",
+        "type": "topping",
+        "price": {
+          "small": 1,
+          "medium": 1.5,
+          "large": 2,
+          "x-large": 2.5
+        }
+      },
+      {
+        "order": 11,
+        "name": "Chicken Sausage",
+        "id": "chicken-sausage-topping",
+        "type": "topping",
+        "price": {
+          "small": 1,
+          "medium": 1.5,
+          "large": 2,
+          "x-large": 2.5
+        }
+      },
+      {
+        "order": 12,
+        "name": "Bacon",
+        "id": "bacon-topping",
+        "type": "topping",
+        "price": {
+          "small": 1,
+          "medium": 1.5,
+          "large": 2,
+          "x-large": 2.5
+        }
+      },
+      {
+        "order": 13,
+        "name": "Mushrooms",
+        "id": "mushrooms-topping",
+        "type": "topping",
+        "price": {
+          "small": 0.5,
+          "medium": 1,
+          "large": 1.5,
+          "x-large": 2
+        }
+      },
+      {
+        "order": 14,
+        "name": "Black Olives",
+        "id": "black-olives-topping",
+        "type": "topping",
+        "price": {
+          "small": 0.5,
+          "medium": 1,
+          "large": 1.5,
+          "x-large": 2
+        }
+      },
+      {
+        "order": 15,
+        "name": "Roasted Garlic",
+        "id": "roasted-garlic-topping",
+        "type": "topping",
+        "price": {
+          "small": 0.5,
+          "medium": 1,
+          "large": 1.5,
+          "x-large": 2
+        }
+      },
+      {
+        "order": 16,
+        "name": "Green Peppers",
+        "id": "green-peppers-topping",
+        "type": "topping",
+        "price": {
+          "small": 0.5,
+          "medium": 1,
+          "large": 1.5,
+          "x-large": 2
+        }
+      },
+      {
+        "order": 17,
+        "name": "Tomatoes",
+        "id": "tomatoes-topping",
+        "type": "topping",
+        "price": {
+          "small": 0.5,
+          "medium": 1,
+          "large": 1.5,
+          "x-large": 2
+        }
+      },
+      {
+        "order": 18,
+        "name": "Spinach",
+        "id": "spinach-topping",
+        "type": "topping",
+        "price": {
+          "small": 0.5,
+          "medium": 1,
+          "large": 1.5,
+          "x-large": 2
+        }
+      },
+      {
+        "order": 19,
+        "name": "Jalepenos",
+        "id": "jalepenos-topping",
+        "type": "topping",
+        "price": {
+          "small": 0.5,
+          "medium": 1,
+          "large": 1.5,
+          "x-large": 2
+        }
+      },
+      {
+        "order": 20,
+        "name": "Pine Nuts",
+        "id": "pine-nuts-topping",
+        "type": "topping",
+        "price": {
+          "small": 0.5,
+          "medium": 1,
+          "large": 1.5,
+          "x-large": 2
+        }
+      },
+      {
+        "order": 21,
+        "name": "Fresh Basil",
+        "id": "fresh-basil-topping",
+        "type": "topping",
+        "price": {
+          "small": 0.5,
+          "medium": 1,
+          "large": 1.5,
+          "x-large": 2
+        }
+      }
+    ],
+    "salads": [
+      {
+        "order": 22,
+        "name": "Garden Salad",
+        "id": "garden-salad",
+        "type": "salad",
+        "price": {
+          "regular": 5,
+          "large": 6.5
+        }
+      },
+      {
+        "order": 23,
+        "name": "Greek Salad",
+        "id": "greek-salad",
+        "type": "salad",
+        "price": {
+          "regular": 5,
+          "large": 6.5
+        }
+      },
+      {
+        "order": 24,
+        "name": "Caesar Salad",
+        "id": "caesar-salad",
+        "type": "salad",
+        "price": {
+          "regular": 5,
+          "large": 6.5
+        }
+      },
+      {
+        "order": 25,
+        "name": "Spinach Salad",
+        "id": "spinach-salad",
+        "type": "salad",
+        "price": {
+          "regular": 5,
+          "large": 6.5
+        }
+      }
+    ],
+    "dressings": [
+      {
+        "order": 26,
+        "name": "House Dressing",
+        "id": "house-dressing",
+        "type": "dressing",
+        "price": {
+          "regular": 1.5,
+          "large": 2
+        }
+      },
+      {
+        "order": 27,
+        "name": "Caesar Dressing",
+        "id": "caesar-dressing",
+        "type": "dressing",
+        "price": {
+          "regular": 1.5,
+          "large": 2
+        }
+      },
+      {
+        "order": 28,
+        "name": "Blue Cheese Dressing",
+        "id": "blue-cheese-dressing",
+        "type": "dressing",
+        "price": {
+          "regular": 1.5,
+          "large": 2
+        }
+      },
+      {
+        "order": 29,
+        "name": "Ranch Dressing",
+        "id": "ranch-dressing",
+        "type": "dressing",
+        "price": {
+          "regular": 1.5,
+          "large": 2
+        }
+      },
+      {
+        "order": 30,
+        "name": "Italian Dressing",
+        "id": "italian-dressing",
+        "type": "dressing",
+        "price": {
+          "regular": 1.5,
+          "large": 2
+        }
+      }
+    ],
+    "beverages": [
+      {
+        "order": 31,
+        "name": "San Pellegrino",
+        "id": "san-pellegrino-beverage",
+        "type": "beverage",
+        "desc": "Delicious sparkling water.",
+        "price": {
+          "regular": 2.5
+        }
+      },
+      {
+        "order": 32,
+        "name": "Water",
+        "id": "water-beverage",
+        "type": "beverage",
+        "desc": "Delicious water without the sparkles",
+        "price": {
+          "regular": 1
+        }
+      },
+      {
+        "order": 33,
+        "name": "Cola",
+        "id": "cola-beverage",
+        "type": "beverage",
+        "price": {
+          "regular": 1.5
+        }
+      },
+      {
+        "order": 34,
+        "name": "Diet Cola",
+        "id": "diet-cola-beverage",
+        "type": "beverage",
+        "price": {
+          "regular": 1.5
+        }
+      },
+      {
+        "order": 35,
+        "name": "Sierra Nevada Pale Ale",
+        "id": "snpa-beverage",
+        "type": "beverage",
+        "desc": "A very butch beer with tons of flavor.",
+        "price": {
+          "regular": 2.5
+        }
+      },
+      {
+        "order": 36,
+        "name": "Diet Sierra Nevada Pale Ale",
+        "id": "diet-snpa-beverage",
+        "type": "beverage",
+        "desc": "The exact same as regular SNPA but \"diet\".",
+        "price": {
+          "regular": 3
+        }
+      }
+    ]
+  }
 }
 ```
