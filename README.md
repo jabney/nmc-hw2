@@ -760,7 +760,7 @@ Response:
         "desc": "This pizza is for repeat customers who've been discourtious
           to our drivers on previous deliveries. We start with the pizza you
           order and add some additional, non-disclosed bonus toppings free of
-          charge. Bon apetit!",
+          charge. Bon appétit!",
         "price": {
           "small": 12.99,
           "medium": 14.99,
