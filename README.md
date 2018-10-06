@@ -282,12 +282,12 @@ Response:
 
 #### Delete a User
 
-This will delete a user record along with their cart and token.
+This will delete the user specified by the token along with their cart and token.
 
 Request:
 
 ```
-DELETE /users?email=jimmy@example.com
+DELETE /users
 ```
 
 Response:
