@@ -132,6 +132,7 @@ lib.get = (requestData, response) => {
 
     // Continue handling request...
   })
+})
 ```
 
 ### Test Runner
